@@ -1,0 +1,41 @@
+{
+  "project": "AeroTherm-SAR",
+  "repository": "https://github.com/Ahmed-Al-Masqari/AeroTherm-SAR",
+  "current_phase": "Phase 2 - Multi-Domain Generalization (Exp-03 Ready)",
+  "champion_model": {
+    "exp_id": "Exp-02-ep35",
+    "architecture": "YOLO11s",
+    "imgsz": 1024,
+    "dataset": "Unified_SAR_Person_v1",
+    "airesq_mAP50_std_1024": 0.5282,
+    "airesq_mAP50_tta_1024": 0.5496,
+    "airesq_precision_tta": 0.617,
+    "inference_ms_t4_std": 20.2
+  },
+  "phase1_tactical_best": {
+    "architecture": "YOLO11s-Pro (CLAHE + Balanced)",
+    "imgsz": 800,
+    "classes": [
+      "Person",
+      "Car",
+      "Bicycle",
+      "OtherVehicle"
+    ],
+    "hit_uav_test_mAP50_all4": 0.8963,
+    "hit_uav_test_mAP50_person": 0.9338
+  },
+  "prepared_next_dataset": {
+    "name": "Unified_SAR_Person_v2",
+    "sources": [
+      "UAV-COCO",
+      "HIT-UAV-Normal",
+      "POP"
+    ],
+    "train_images": 5676,
+    "val_images": 1113,
+    "test_images": 761,
+    "total_person_boxes": 23487,
+    "train_background_pct": 16.12
+  },
+  "next_step": "Train Exp-03 (YOLO11s @ 1024px) on Unified_SAR_Person_v2 and evaluate zero-shot gain on AIResQ"
+}

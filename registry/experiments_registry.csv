@@ -1,0 +1,6 @@
+exp_id,model,imgsz,dataset,classes,val_mAP50,int_test_mAP50,int_test_recall,ext_airesq_precision,ext_airesq_recall,ext_airesq_mAP50,ext_airesq_mAP50_95,ext_empty_fp_rate_025,ext_empty_fp_rate_050,inference_ms_t4,notes
+Exp-01,YOLO11s,1024,COCO_YOLO_v2_CleanSplit,1 (person),0.9876,0.9945,0.9828,0.5425,0.5017,0.4623,0.2018,45.43,26.52,20.90,Zero-leakage sequence split baseline (40 epochs)
+Exp-02,YOLO11s,1024,Unified_SAR_Person_v1,1 (person),0.7897,0.9139,,0.5257,0.5028,0.4546,0.1952,75.00,36.28,20.20,EarlyStopping saved best.pt at Epoch 23
+Exp-02-ep35,YOLO11s,1024,Unified_SAR_Person_v1 (Epoch 35 last.pt),1 (person),0.8450,,,0.6000,0.5411,0.5282,0.2385,61.89,33.23,20.20,Champion standard 1024px (~49 FPS on T4)
+Exp-02-ep35-TTA,YOLO11s,1024,Unified_SAR_Person_v1 (Epoch 35 + TTA),1 (person),0.8450,,,0.6170,0.5373,0.5496,0.2534,,,45.72,Champion TTA 1024px (+2.14% mAP@50 on AIResQ)
+Exp-02b,YOLO11s,1024,Unified_SAR_Person_v1 (10ep Refine mosaic=0.0),1 (person),,0.8645,0.8531,0.5512,0.5199,0.4768,0.2116,,,19.91,Confirmed domain overfitting when disabling Mosaic

@@ -1,0 +1,11 @@
+# Phase 1: HIT-UAV Tactical 4-Class Configuration (Corrected Official Labels)
+path: ./datasets/hit_uav_pro_balanced
+train: images/train
+val: images/val
+test: images/test
+nc: 4
+names:
+  0: Person
+  1: Car
+  2: Bicycle
+  3: OtherVehicle
