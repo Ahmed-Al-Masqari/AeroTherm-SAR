@@ -1,0 +1,46 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Jupyter & Colab
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datasets, Archives & Caches (Never commit raw multi-GB data)
+raw_datasets/
+processed_datasets/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.cache
+
+# Model Weights & Training Runs (Publish via GitHub Releases)
+runs/
+experiments/
+weights/*.pt
+weights/*.pth
+weights/*.onnx
+weights/*.engine
+*.pt
+*.pth
+
+# Large Video Outputs
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
